@@ -12,6 +12,7 @@ export class UsersComponent implements OnInit{
   displayedColumns: string[] = [];
   dataSource = new MatTableDataSource<any>([]);
   convertCamelCaseToSentence: (key: string)  => string = convertCamelCaseToSentence;
+  searchQuery = null;
 
   ngOnInit(): void {
     const dataFromApi = { columns: ["name", "mobile", "companyName", "companyWebsite", "email"], data: [{name: "Karan", mobile: "9599909167", companyName: "Google", companyWebsite: "google.com", email: "karankanojia2708@gmail.com"}]};

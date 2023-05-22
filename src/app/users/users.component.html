@@ -1,5 +1,26 @@
-<table mat-table [dataSource]="dataSource">
+<div class="container">
+  <div class="item item1">
+    <div class="item-content">
+      <button mat-button mat-raised-button color="primary">Add User</button>
+    </div>
+  </div>
+  <div class="item item2">
+    <div class="item-content search-input">
+      <input class="customMatInput" placeholder="Search" [(ngModel)]="searchQuery">
+    </div>
+  </div>
+  <div class="item item3">
+    <div class="item-content" style="width: 80%; margin-right: 5px; margin-left: 5px;">
+        <mat-select placeholder="Show">
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+    </div>
+  </div>
+</div>
 
+<table mat-table [dataSource]="dataSource">
   <!-- Define the table columns -->
   <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
     <th mat-header-cell *matHeaderCellDef>{{ convertCamelCaseToSentence(column) }}</th>

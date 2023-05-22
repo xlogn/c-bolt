@@ -15,6 +15,10 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +37,10 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
